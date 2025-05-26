@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My To-Do List - Estetik</title>
+<script src="jquery.min.js"></script>
+<style>
+    body {
+        background-image: url(img/kayu.jpg);
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        padding: 40px 20px;
+        color: #0a2e3c;
+    }
+    .container {
+        background: #ffffffcc;
+        border-radius: 24px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        width: 100%;
+        max-width:900px;
+        padding: 40px 32px;
+        text-align: center;
+    }
+    h1 {
+        font-weight: 700;
+        margin-bottom: 32px;
+        color: #065a82;
+        letter-spacing: 1.2px;
+    }
+    select, input[type="text"] {
+        font-family: inherit;
+        font-size: 16px;
+        padding: 14px 18px;
+        border-radius: 12px;
+        border: 2px solid #74a6bc;
+        outline: none;
+        transition: border-color 0.3s ease;
+        width: calc(100% - 26px);
+        margin-bottom: 20px;
+    }
+    select:focus, input[type="text"]:focus {
+        border-color: #0a4275;
+        box-shadow: 0 0 8px rgba(10, 66, 117, 0.3);
+    }
+    .task-container {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+    .task-container input[type="text"] {
+        flex-grow: 1;
+        margin-bottom: 0;
+    }
+    button.Push {
+        background: #0a4275;
+        color: #fff;
+        border: none;
+        padding: 14px 28px;
+        border-radius: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 8px 15px rgba(10, 66, 117, 0.4);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    button.Push:hover {
+        background: #083a65;
+        box-shadow: 0 12px 20px rgba(8, 58, 101, 0.6);
+    }
+    #stackList {
+        max-height: 350px;
+        overflow-y: auto;
+        padding-right: 6px;
+    }
+    .container-review {
+        background: #e9f5fc;
+        border-radius: 16px;
+        padding: 14px 20px;
+        margin-bottom: 14px;
+        box-shadow: 0 6px 15px rgba(10, 66, 117, 0.15);
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: slideUpFade 0.4s forwards;
+    }
+    .container-review img {
+        width: 64px;
+        height: 64px;
+        border-radius: 14px;
+        object-fit: cover;
+        box-shadow: 0 3px 8px rgba(10,66,117,0.25);
+    }
+    .items p {
+        margin: 0;
+        font-weight: 600;
+        font-size: 18px;
+        color: #0a2e3c;
+        user-select: none;
+    }
+    @keyframes slideUpFade {
+        to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+    }
+    .Home {
+        background: #0a4275;
+        color: #fff;
+        border: none;
+        padding: 14px 28px;
+        border-radius: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 8px 15px rgba(10, 66, 117, 0.4);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .Home a{
+        text-decoration: none;
+        color: white;
+    }
+   .Home:hover {
+        background: #083a65;
+        box-shadow: 0 12px 20px rgba(8, 58, 101, 0.6);
+    }
+</style>
+</head>
+<body>
+    <div class="container" role="main" aria-label="My To-Do List">
+        <h1>Review Masakannya Dong 🤗</h1>
+        <select aria-label="Pilih Menu" id="menuSelect">
+        <option disabled selected>------ Pilih Menu ------</option>
+        <option value="ayamgulai.png">Ayam Gulai</option>
+        <option value="ayamgorenglaos.png">Ayam Goreng Laos</option>
+        <option value="ayampop.png">Ayam Pop</option>
+        <option value="rendang.png">Rendang</option>
+        <option value="dendeng.png">Dendeng Batokok</option>
+        <option value="tambusu.png">Gulai Tambunsu</option>
+        <option value="gulaikepalakakap.png">Gulai Kepala Kakap</option>
+        <option value="ikanasampadeh.png">Ikan Asam Padeh</option>
+        <option value="ikanbakar.png">Ikan Bakar Padang</option>
+        </select>
+
+        <div class="task-container">
+        <input class="task" id="taskInput" type="text" placeholder="Tulis Review Kamu Disini" />
+        <button class="Push" >Add</button>
+        </div>
+
+        <div id="stackList"></div>
+        <button class="Home"><a href="Padang.html">Kembali Ke Halaman Utama</a></button>
+    
+    </div>
+<script>
+  $(document).ready(function () {
+    let stack = [];
+    let gambar = [];
+
+    function tampilkanStack() {
+      $('#stackList').empty();
+      for (let i = 0; i < stack.length; i++) {
+        const item = $(`
+          <div class="container-review" style="animation-delay:${i * 0.1}s">
+            <div><img src="img/${gambar[i]}" alt="${stack[i]} image" loading="lazy" /></div>
+            <div class="items"><p>${stack[i]}</p></div>
+          </div>
+        `);
+        $('#stackList').append(item);
+      }
+    }
+
+    $('.Push').click(function () {
+      const selectedImg = $('#menuSelect').val();
+      const taskText = $('#taskInput').val().trim();
+
+      if (!selectedImg) {
+        alert("Please select a menu item!");
+        return;
+      }
+      if (taskText === "") {
+        alert("Please Input Review!");
+        return;
+      }
+      if (stack.length >= 10) {
+        alert("Maximum of 10 tasks allowed!");
+        return;
+      }
+      stack.push(taskText);
+      gambar.push(selectedImg);
+      $('#taskInput').val("");
+      tampilkanStack();
+    });
+
+    // Optional: Enter key adds task
+    $('#taskInput').keypress(function (e) {
+      if (e.which === 13) {
+        $('.Push').click();
+      }
+    });
+  });
+</script>
+</body>
+</html>

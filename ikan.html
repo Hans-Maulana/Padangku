@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="bsnaspad.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="jquery.min.js"></script>
+  
+  <style>
+    body {
+      background-image: url('img/kayu.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #3a3a3a;
+      margin: 0;
+      padding: 0;
+    }
+    .my-navbar-bg {
+      background-color: #fff9f0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      font-weight: 600;
+    }
+    .navbar-brand .logo {
+      width: 70px;
+      filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+    }
+    .navbar-nav .nav-link {
+      color: #555;
+      font-size: 1.05rem;
+      transition: color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus {
+      color: #d97706;
+      font-weight: 700;
+    }
+    .nav-item.dropdown:hover > .dropdown-menu {
+      display: block;
+      margin-top: 0;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .dropdown-menu {
+      border-radius: 12px;
+      padding: 0.4rem 0;
+    }
+    .dropdown-item {
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.6rem 1.5rem;
+      transition: background-color 0.2s ease;
+    }
+    .dropdown-item:hover {
+      background-color: #ffd29e;
+      color: #663300;
+    }
+    .hero-section {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 50px 40px;
+      border-radius: 25px;
+      margin: 40px auto;
+      max-width: 1100px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+    .hero-section h2#judul {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #a63603;
+      margin-bottom: 0.3em;
+    }
+    .hero-section p#definisi {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: #5a4631;
+      max-width: 450px;
+    }
+    .hero-image {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      box-shadow: 0 10px 25px rgba(166, 94, 16, 0.3);
+      object-fit: cover;
+      border: 8px solid #f0c27b;
+      transition: transform 0.3s ease;
+    }
+    .hero-image:hover {
+      transform: scale(1.05);
+    }
+    .btn-primary {
+      background-color: #d97706;
+      border: none;
+      padding: 12px 28px;
+      font-size: 1.1rem;
+      border-radius: 50px;
+      box-shadow: 0 5px 15px rgba(217, 119, 6, 0.4);
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #b36003;
+    }
+    #resep {
+      color: #b24500;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      margin-bottom: 30px;
+      text-align: center;
+      text-shadow: 0 2px 6px rgba(178, 69, 0, 0.4);
+    }
+    .card {
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      background: #fffaf0;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    .card-header {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .list-group-item {
+      font-size: 1.1rem;
+      border: none;
+      padding: 12px 25px;
+      background: #fffaf0;
+      color: #4a3f35;
+      border-bottom: 1px solid #f0d5a6;
+    }
+    .list-group-item:last-child {
+      border-bottom: none;
+    }
+    .list-group-numbered > li {
+      font-size: 1.05rem;
+      color: #59432e;
+      padding-left: 28px;
+      padding-right: 25px;
+      border: none;
+      background: #fffaf0;
+      margin-bottom: 6px;
+    }
+    .list-group-numbered > li::marker {
+      color: #d97706;
+      font-weight: 700;
+    }
+    .container.hero-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: #a7550a;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .dish-card img {
+      border-radius: 15px 0 0 15px;
+      box-shadow: 0 10px 15px rgba(0,0,0,0.08);
+    }
+    @media (max-width: 768px) {
+      .hero-section {
+        flex-direction: column;
+        padding: 30px 20px;
+      }
+      .hero-section h2#judul {
+        font-size: 2.2rem;
+        text-align: center;
+      }
+      .hero-section p#definisi {
+        max-width: 100%;
+        text-align: center;
+      }
+      .hero-image {
+        margin: 20px 0 0;
+        width: 250px;
+        height: 250px;
+      }
+    }
+    #tulis a{
+      text-decoration: none;
+      color: white;
+    }
+
+  
+  </style>
+</head>
+<body>
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light my-navbar-bg">
+    <div class="container">
+      <a class="navbar-brand" href="Padang.html"><img src="img/Logo.png" class="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="Padang.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="review.html">Review</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Kategori Menu</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Padang.html#ayam">Ayam 🐔</a></li>
+              <li><a class="dropdown-item" href="Padang.html#sapi">Sapi 🐮</a></li>
+              <li><a class="dropdown-item" href="Padang.html#ikan">Ikan 🐠</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container hero-section row align-items-center">
+    <div class="col-md-6">
+      <h2 id="judul" class="fw-bold">Ayam Gulai</h2>
+      <p id="definisi" class="text-muted"></p>
+      <h5>Rating Menu</h5>
+      <p>⭐⭐⭐⭐⭐</p>
+      <button id="tulis" class="btn btn-primary btn-lg"><a href="review.html">Tulis Ulasan!</a></button>
+    </div>
+    <div class="col-md-6 text-center">
+      <p id="gambar"><img src="img/ayamgulai.png" alt="Ramen" class="hero-image" width="300"></p>
+    </div>
+  </div>
+  
+    <div class="container py-5">
+  <h1 id="resep" class="text-center mb-4"></h1>
+
+  <div class="row">
+    <!-- Bahan-bahan -->
+    <div class="col-md-6 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-header bg-warning text-white">
+          <strong>Bahan-bahan</strong>
+        </div>
+        <ul id="bahan" class="list-group list-group-flush">
+          
+        </ul>
+      </div>
+    </div>
+
+      <!-- Cara Membuat -->
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-success text-white">
+            <strong>Cara Membuat</strong>
+          </div>
+          <ol id="langkah" class="list-group list-group-numbered list-group-flush">
+
+          </ol>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- Menu Cards -->
+  <div class="container hero-section">
+    <h3 class="text-center mb-4">🍛 Rekomendasi Menu Lain Nih!</h3>
+
+    <div class="row g-4">
+      <div class="col-12">
+        <div class="card h-100 shadow-sm">
+          <div class="row g-0 align-items-center">
+            <div class="col-md-4 col-sm-12">
+              <p id="gambar1"></p>
+            </div>
+            <div class="col-md-8 col-sm-12">
+              <div class="card-body">
+                <h5 id="menu1" class="card-title"></h5>
+                <p id="submenu1" class="card-text"></p>
+                <p id="tombol1" ><a href="ayam.html?nama=ayamlaos" class="btn btn-sm btn-primary">Lihat Resep</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="card h-100 shadow-sm">
+          <div class="row g-0 align-items-center">
+            <div class="col-md-4 col-sm-12">
+              <p id="gambar2"></p>
+            </div>
+            <div class="col-md-8 col-sm-12">
+              <div class="card-body">
+                <h5 id="menu2" class="card-title"></h5>
+                <p id="submenu2" class="card-text"></p>
+                <p id="tombol2"><a href="ayam.html?nama=ayampop" class="btn btn-sm btn-primary">Lihat Resep</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> 
+  </div> 
+
+ <script>
+    let kilo = prompt("Masukkan Berapa Kg Daging Ikan")
+    const params = new URLSearchParams(window.location.search);
+    const nama = params.get("nama");
+    if (nama=="ikanbakar"){
+      document.getElementById("gambar1").innerHTML='<img src="img/gulaikepalakakap.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Gulai Kepala Kakap">'
+      document.getElementById("menu1").innerHTML='Gulai Kepala Kakap'
+      document.getElementById("submenu1").innerHTML='Kepala ikan kakap dalam kuah santan pedas dan harum rempah.'
+      document.getElementById("tombol1").innerHTML='<a href="ikan.html?nama=gulaikepalakakap" class="btn btn-sm btn-primary">Lihat Resep</a>'
+
+      document.getElementById("gambar2").innerHTML='<img src="img/ikanasampadeh.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ikan Asam Padeh">'
+      document.getElementById("menu2").innerHTML='Ikan Asam Padeh'
+      document.getElementById("submenu2").innerHTML='Ikan berkuah pedas asam tanpa santan, segar dan menggugah selera.'
+      document.getElementById("tombol2").innerHTML='<a href="ikan.html?nama=ikanasampadeh" class="btn btn-sm btn-primary">Lihat Resep</a>'
+
+
+      document.getElementById("gambar").innerHTML='<img src="img/ikanbakar.png" alt="Ikan Bakar Padang" class="hero-image" width="300">'
+      document.getElementById("judul").innerHTML="Ikan Bakar Padang"
+      document.getElementById("resep").innerHTML="🐟 Resep Ikan Bakar Padang"
+      document.getElementById("definisi").innerHTML="Ikan berbumbu kuning pedas yang dibakar hingga harum."
+
+      document.getElementById("bahan").innerHTML = ""
+      document.getElementById("langkah").innerHTML = ""
+      for (let i = 1 ; i <= 15; i++){
+        document.getElementById("bahan").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
+      }
+      for (let i = 100 ; i <= 107; i++){
+        document.getElementById("langkah").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
+      }
+      document.getElementById("100").innerHTML = "Siapkan bumbu halus, lalu blender atau uleg hingga halus.";
+      document.getElementById("101").innerHTML = "Bersihkan ikan hingga tidak ada kotoran yang tersisa.";
+      document.getElementById("102").innerHTML = "Panaskan minyak, lalu tumis bumbu halus bersama serai, daun salam, dan daun jeruk hingga harum.";
+      document.getElementById("103").innerHTML = "Tuang air, masukkan ikan ke dalam tumisan.";
+      document.getElementById("104").innerHTML = "Tambahkan santan instan, garam, dan penyedap rasa secukupnya.";
+      document.getElementById("105").innerHTML = "Masak hingga kuah menyusut dan mengental.";
+      document.getElementById("106").innerHTML = "Panggang ikan bolak-balik hingga kecokelatan dan matang merata.";
+      document.getElementById("107").innerHTML = "Ikan siap disajikan selagi hangat.";
+      document.getElementById("1").innerHTML = kilo * 1 + " kg ikan kembung";
+      document.getElementById("2").innerHTML = kilo * 4 + " batang serai, geprek";
+      document.getElementById("3").innerHTML = kilo * 6 + " lembar daun salam";
+      document.getElementById("4").innerHTML = kilo * 6 + " lembar daun jeruk";
+      document.getElementById("5").innerHTML = kilo * 12 + " buah bawang merah";
+      document.getElementById("6").innerHTML = kilo * 10 + " siung bawang putih";
+      document.getElementById("7").innerHTML = kilo * 4 + " ruas kunyit";
+      document.getElementById("8").innerHTML = kilo * 4 + " ruas jahe";
+      document.getElementById("9").innerHTML = kilo * 4 + " butir kemiri";
+      document.getElementById("10").innerHTML = kilo * 16 + " buah cabai merah keriting";
+      document.getElementById("11").innerHTML = kilo * 2 + " ruas lengkuas";
+      document.getElementById("12").innerHTML = kilo * 130 + " ml santan instan";
+      document.getElementById("13").innerHTML = kilo * 1200 + " ml air";
+      document.getElementById("14").innerHTML = "Garam dan penyedap rasa secukupnya (disesuaikan)";
+      document.getElementById("15").innerHTML = "Minyak untuk menumis secukupnya";
+
+    }
+    else if (nama=="gulaikepalakakap"){
+      document.getElementById("gambar1").innerHTML='<img src="img/ikanbakar.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ikan Bakar Padang">'
+      document.getElementById("menu1").innerHTML='Ikan Bakar Padang'
+      document.getElementById("submenu1").innerHTML='Ikan berbumbu kuning pedas yang dibakar hingga harum.'
+      document.getElementById("tombol1").innerHTML='<a href="ikan.html?nama=ikanbakar" class="btn btn-sm btn-primary">Lihat Resep</a>'
+
+      document.getElementById("gambar2").innerHTML='<img src="img/ikanasampadeh.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ikan Asam Padeh">'
+      document.getElementById("menu2").innerHTML='Ikan Asam Padeh'
+      document.getElementById("submenu2").innerHTML='Ikan berkuah pedas asam tanpa santan, segar dan menggugah selera.'
+      document.getElementById("tombol2").innerHTML='<a href="ikan.html?nama=ikanasampadeh" class="btn btn-sm btn-primary">Lihat Resep</a>'
+
+      document.getElementById("gambar").innerHTML='<img src="img/gulaikepalakakap.png" alt="Gulai Kepala Kakap" class="hero-image" width="300">'
+      document.getElementById("judul").innerHTML="Gulai Kepala Kakap"
+      document.getElementById("resep").innerHTML="🐟 Resep Gulai Kepala Kakap"
+      document.getElementById("definisi").innerHTML="Kepala ikan kakap dalam kuah santan pedas dan harum rempah."
+
+      document.getElementById("bahan").innerHTML = ""
+      document.getElementById("langkah").innerHTML = ""
+      for (let i = 1 ; i <= 15; i++){
+        document.getElementById("bahan").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
+      }
+      for (let i = 100 ; i <= 104; i++){
+        document.getElementById("langkah").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
+      }
+      document.getElementById("100").innerHTML = "Siapkan bahan. Cuci bersih kepala ikan, beri perasan lemon dan sedikit garam. Sisihkan. Haluskan bahan bumbu halus"
+      document.getElementById("101").innerHTML = "Tumis bumbu halus beserta sereh, daun kunyit dan daun jeruk sampai harum. Tuang santan, masak sekitar 10 menit sambil diaduk supaya tidak pecah"
+      document.getElementById("102").innerHTML = "Masukkan kepala ikan kakap, asam kandis dan potongan tomat hijau / belimbing sayur. Masak sampai ikan matang, ± 15-20 menit dengan api sedang sambil sesekali diaduk."
+      document.getElementById("103").innerHTML = "Beri garam dan gula, aduk rata. Koreksi rasa sampai sesuai selera."
+      document.getElementById("104").innerHTML = "Angkat dan siap disajikan."
+      document.getElementById("1").innerHTML = kilo * 1 + " kg ikan kakap";
+      document.getElementById("2").innerHTML = kilo * 16 + " siung bawang merah";
+      document.getElementById("3").innerHTML = kilo * 6 + " siung bawang putih";
+      document.getElementById("4").innerHTML = kilo * 30 + " buah cabai merah (sesuai selera)";
+      document.getElementById("5").innerHTML = kilo * 20 + " buah cabai rawit (sesuai selera)";
+      document.getElementById("6").innerHTML = kilo * 6 + " butir kemiri";
+      document.getElementById("7").innerHTML = kilo * 2 + " ruas kunyit";
+      document.getElementById("8").innerHTML = kilo * 2 + " iris jahe";
+      document.getElementById("9").innerHTML = kilo * 4 + " batang serai, memarkan";
+      document.getElementById("10").innerHTML = kilo * 10 + " lembar daun jeruk, buang tulang tengahnya";
+      document.getElementById("11").innerHTML = kilo * 2 + " lembar daun kunyit, simpulkan atau iris halus";
+      document.getElementById("12").innerHTML = kilo * 2 + " buah asam kandis";
+      document.getElementById("13").innerHTML = kilo * 10 + " buah belimbing sayur atau tomat hijau, potong-potong";
+      document.getElementById("14").innerHTML = kilo * 2000 + " ml santan (kara + air)";
+      document.getElementById("15").innerHTML = "Garam dan gula secukupnya (disesuaikan dengan selera)";
+    }
+    else if (nama=="ikanasampadeh"){
+      document.getElementById("gambar1").innerHTML='<img src="img/ikanbakar.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ikan Bakar Padang">'
+      document.getElementById("menu1").innerHTML='Ikan Bakar Padang'
+      document.getElementById("submenu1").innerHTML='Ikan berbumbu kuning pedas yang dibakar hingga harum.'
+      document.getElementById("tombol1").innerHTML='<a href="ikan.html?nama=ikanbakar" class="btn btn-sm btn-primary">Lihat Resep</a>'
+
+      document.getElementById("gambar2").innerHTML='<img src="img/gulaikepalakakap.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Gulai Kepala Kakap">'
+      document.getElementById("menu2").innerHTML='Gulai Kepala Kakap'
+      document.getElementById("submenu2").innerHTML='Kepala ikan kakap dalam kuah santan pedas dan harum rempah.'
+      document.getElementById("tombol2").innerHTML='<a href="ikan.html?nama=gulaikepalakakap" class="btn btn-sm btn-primary">Lihat Resep</a>'
+
+      document.getElementById("gambar").innerHTML='<img src="img/ikanasampadeh.png" alt="Ikan Asam Padeh" class="hero-image" width="300">'
+      document.getElementById("judul").innerHTML="Ikan Asam Padeh"
+      document.getElementById("resep").innerHTML="🐟 Resep Ikan Asam Padeh"
+      document.getElementById("definisi").innerHTML="Ikan berkuah pedas asam tanpa santan, segar dan menggugah selera."
+      
+      document.getElementById("bahan").innerHTML = ""
+      document.getElementById("langkah").innerHTML = ""
+     
+      for (let i = 1 ; i <= 15; i++){
+        document.getElementById("bahan").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
+      }
+      for (let i = 100 ; i <= 105; i++){
+        document.getElementById("langkah").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
+      }
+    
+      document.getElementById("100").innerHTML = "Masukkan bumbu halus ke dalam kuali.";
+      document.getElementById("101").innerHTML = "Masukkan air dan semua daun-daunan, lalu masak hingga mendidih.";
+      document.getElementById("102").innerHTML = "Masukkan ikan Padang yang sudah dicuci, garam, kaldu bubuk, dan tomat yang sudah diblender.";
+      document.getElementById("103").innerHTML = "Masak hingga kuah menyusut dan mengental.";
+      document.getElementById("104").innerHTML = "Cicipi, koreksi rasa sesuai selera.";
+      document.getElementById("105").innerHTML = "Makanan siap disajikan.";
+      document.getElementById("1").innerHTML = kilo * 1 + " kg ikan padang";
+      document.getElementById("2").innerHTML = kilo * 10 + " buah tomat";
+      document.getElementById("3").innerHTML =  kilo * 5 + " sdt garam";
+      document.getElementById("4").innerHTML =  kilo * 7.5 + " sdt kaldu bubuk";
+      document.getElementById("5").innerHTML = kilo * 3000 + " ml air";
+      document.getElementById("6").innerHTML = kilo * 5 + " lembar daun salam";
+      document.getElementById("7").innerHTML = kilo * 5 + " lembar daun kunyit";
+      document.getElementById("8").innerHTML = kilo * 15 + " lembar daun jeruk";
+      document.getElementById("9").innerHTML = kilo * 15 + " lembar daun ruku-ruku";
+      document.getElementById("10").innerHTML = kilo * 500 + " gram cabai merah";
+      document.getElementById("11").innerHTML = kilo * 5 + " cm kunyit";
+      document.getElementById("12").innerHTML = kilo * 5 + " cm jahe";
+      document.getElementById("13").innerHTML = kilo * 10 + " siung bawang putih";
+      document.getElementById("14").innerHTML = kilo * 35 + " butir bawang merah";
+      document.getElementById("15").innerHTML =  kilo * 35 + " butir ketumbar";
+      
+    }
+     
+  </script>
+    
+</body>
+</html>
+
+
+
