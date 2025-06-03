@@ -156,53 +156,63 @@
         <button class="Home"><a href="index.html">Kembali Ke Halaman Utama</a></button>
     
     </div>
-<script>
-  $(document).ready(function () {
-    let stack = [];
-    let gambar = [];
+  <script>
+    $(document).ready(function () {
+      let stack = JSON.parse(localStorage.getItem("reviewStack")) || [];
+      let gambar = JSON.parse(localStorage.getItem("reviewGambar")) || [];
 
-    function tampilkanStack() {
-      $('#stackList').empty();
-      for (let i = 0; i < stack.length; i++) {
-        const item = $(`
-          <div class="container-review" style="animation-delay:${i * 0.1}s">
-            <div><img src="img/${gambar[i]}" alt="${stack[i]} image" loading="lazy" /></div>
-            <div class="items"><p>${stack[i]}</p></div>
-          </div>
-        `);
-        $('#stackList').append(item);
+      function simpanKeLocalStorage() {
+        localStorage.setItem("reviewStack", JSON.stringify(stack));
+        localStorage.setItem("reviewGambar", JSON.stringify(gambar));
       }
-    }
 
-    $('.Push').click(function () {
-      const selectedImg = $('#menuSelect').val();
-      const taskText = $('#taskInput').val().trim();
+      function tampilkanStack() {
+        $('#stackList').empty();
+        for (let i = 0; i < stack.length; i++) {
+          const item = $(`
+            <div class="container-review" style="animation-delay:${i * 0.1}s">
+              <div><img src="img/${gambar[i]}" alt="${stack[i]} image" loading="lazy" /></div>
+              <div class="items"><p>${stack[i]}</p></div>
+            </div>
+          `);
+          $('#stackList').append(item);
+        }
+      }
 
-      if (!selectedImg) {
-        alert("Please select a menu item!");
-        return;
-      }
-      if (taskText === "") {
-        alert("Please Input Review!");
-        return;
-      }
-      if (stack.length >= 10) {
-        alert("Maximum of 10 tasks allowed!");
-        return;
-      }
-      stack.push(taskText);
-      gambar.push(selectedImg);
-      $('#taskInput').val("");
+      $('.Push').click(function () {
+        const selectedImg = $('#menuSelect').val();
+        const taskText = $('#taskInput').val().trim();
+
+        if (!selectedImg) {
+          alert("Please select a menu item!");
+          return;
+        }
+        if (taskText === "") {
+          alert("Please Input Review!");
+          return;
+        }
+        if (stack.length >= 10) {
+          alert("Maximum of 10 reviews allowed!");
+          return;
+        }
+
+        stack.push(taskText);
+        gambar.push(selectedImg);
+        simpanKeLocalStorage(); // simpan saat menambah
+        $('#taskInput').val("");
+        tampilkanStack();
+      });
+
+      $('#taskInput').keypress(function (e) {
+        if (e.which === 13) {
+          $('.Push').click();
+        }
+      });
+
+      // Tampilkan review yang sudah disimpan saat pertama kali halaman dibuka
       tampilkanStack();
     });
+  </script>
 
-    // Optional: Enter key adds task
-    $('#taskInput').keypress(function (e) {
-      if (e.which === 13) {
-        $('.Push').click();
-      }
-    });
-  });
-</script>
 </body>
 </html>
