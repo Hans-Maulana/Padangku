@@ -186,8 +186,19 @@
       text-decoration: none;
       color: white;
     }
-
-  
+    #gambar1 img, #gambar2 img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+    #gambar1, #gambar2 {
+      margin: 0;
+      padding: 0;
+    }
+      
   </style>
 </head>
 <body>
@@ -268,7 +279,9 @@
         <div class="card h-100 shadow-sm">
           <div class="row g-0 align-items-center">
             <div class="col-md-4 col-sm-12">
-              <p id="gambar1"></p>
+              <div id="gambar1">
+                <img src="img/ikanbakar.png" class="img-fluid rounded-start" alt="Ayam Gulai">
+              </div>
             </div>
             <div class="col-md-8 col-sm-12">
               <div class="card-body">
