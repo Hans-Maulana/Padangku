@@ -84,6 +84,30 @@
     .container{
       margin-bottom: 30px;
     }
+    @media (min-width: 992px) {
+    
+      .col-md-4 {
+        display: block; 
+      }
+    
+     
+      .next-btn {
+        display: none;
+      }
+    }
+    
+    @media (max-width: 476px) {
+      
+      .col-md-4 {
+        display: none;
+      }
+    
+     
+      .next-btn {
+        display: inline-block;
+      }
+    }
+    
   </style>
 </head>
 <body>
@@ -247,27 +271,47 @@
   <!-- jQuery Script untuk toggle menu -->
   <script>
     $(document).ready(function () {
-      ['ayam', 'sapi', 'ikan'].forEach(function (kategori) {
-        const selector = '#' + kategori + ' .col-md-4';
-        $(selector).hide().eq(0).show().addClass('active');
-      });
-
-      $('.next-btn').click(function () {
-        const kategori = $(this).data('kategori');
-        const cards = $('#' + kategori + ' .col-md-4');
-        const showingAll = $(this).data('showing') === true;
-
-        if (!showingAll) {
-          cards.fadeIn().addClass('active');
-          $(this).data('showing', true);
-          $(this).text('Sembunyikan Menu');
-        } else {
-          cards.removeClass('active').hide().eq(0).fadeIn().addClass('active');
-          $(this).data('showing', false);
-          $(this).text('Tampilkan Menu Lain');
-        }
-      });
+      // Pada desktop, tampilkan semua menu langsung
+      if (window.innerWidth >= 992) {
+        // Menampilkan semua menu pada desktop
+        ['ayam', 'sapi', 'ikan'].forEach(function (kategori) {
+          const selector = '#' + kategori + ' .col-md-4';
+          $(selector).show(); // Menampilkan semua menu langsung di desktop
+        });
+      }
+    
+      // Cek ukuran layar dan jalankan logika untuk mobile
+      function isMobile() {
+        return window.innerWidth <= 991; // Ukuran untuk perangkat mobile
+      }
+    
+      if (isMobile()) {
+        // Mulai dengan hanya menampilkan satu menu pertama pada setiap kategori
+        ['ayam', 'sapi', 'ikan'].forEach(function (kategori) {
+          const selector = '#' + kategori + ' .col-md-4';
+          $(selector).hide().eq(0).show().addClass('active');
+        });
+    
+        // Toggle fungsi hanya di mobile
+        $('.next-btn').click(function () {
+          const kategori = $(this).data('kategori');
+          const cards = $('#' + kategori + ' .col-md-4');
+          const showingAll = $(this).data('showing') === true;
+    
+          if (!showingAll) {
+            cards.fadeIn().addClass('active');
+            $(this).data('showing', true);
+            $(this).text('Sembunyikan Menu');
+          } else {
+            cards.removeClass('active').hide().eq(0).fadeIn().addClass('active');
+            $(this).data('showing', false);
+            $(this).text('Tampilkan Menu Lain');
+          }
+        });
+      }
     });
+    
+    
   </script>
 </body>
 </html>
