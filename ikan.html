@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,68 +18,80 @@
       margin: 0;
       padding: 0;
     }
+
     .my-navbar-bg {
       background-color: #fff9f0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
       font-weight: 600;
     }
+
     .navbar-brand .logo {
       width: 70px;
-      filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+      filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
     }
+
     .navbar-nav .nav-link {
       color: #555;
       font-size: 1.05rem;
       transition: color 0.3s ease;
     }
+
     .navbar-nav .nav-link:hover,
     .navbar-nav .nav-link:focus {
       color: #d97706;
       font-weight: 700;
     }
-    .nav-item.dropdown:hover > .dropdown-menu {
+
+    .nav-item.dropdown:hover>.dropdown-menu {
       display: block;
       margin-top: 0;
       border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
+
     .dropdown-menu {
       border-radius: 12px;
       padding: 0.4rem 0;
     }
+
     .dropdown-item {
       font-weight: 500;
       font-size: 1rem;
       padding: 0.6rem 1.5rem;
       transition: background-color 0.2s ease;
     }
+
     .dropdown-item:hover {
       background-color: #ffd29e;
       color: #663300;
     }
+
     .hero-section {
       background: rgba(255, 255, 255, 0.95);
       padding: 50px 40px;
       border-radius: 25px;
       margin: 40px auto;
       max-width: 1100px;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
       display: flex;
       align-items: center;
       gap: 40px;
     }
+
     .hero-section h2#judul {
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
       color: #a63603;
       margin-bottom: 0.3em;
     }
+
     .hero-section p#definisi {
       font-size: 1.15rem;
       line-height: 1.6;
       color: #5a4631;
       max-width: 450px;
     }
+
     .hero-image {
       width: 320px;
       height: 320px;
@@ -88,9 +101,11 @@
       border: 8px solid #f0c27b;
       transition: transform 0.3s ease;
     }
+
     .hero-image:hover {
       transform: scale(1.05);
     }
+
     .btn-primary {
       background-color: #d97706;
       border: none;
@@ -100,9 +115,11 @@
       box-shadow: 0 5px 15px rgba(217, 119, 6, 0.4);
       transition: background-color 0.3s ease;
     }
+
     .btn-primary:hover {
       background-color: #b36003;
     }
+
     #resep {
       color: #b24500;
       font-family: 'Playfair Display', serif;
@@ -111,22 +128,26 @@
       text-align: center;
       text-shadow: 0 2px 6px rgba(178, 69, 0, 0.4);
     }
+
     .card {
       border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       transition: transform 0.3s ease;
       background: #fffaf0;
     }
+
     .card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     }
+
     .card-header {
       font-family: 'Playfair Display', serif;
       font-size: 1.5rem;
       font-weight: 700;
     }
+
     .list-group-item {
       font-size: 1.1rem;
       border: none;
@@ -135,10 +156,12 @@
       color: #4a3f35;
       border-bottom: 1px solid #f0d5a6;
     }
+
     .list-group-item:last-child {
       border-bottom: none;
     }
-    .list-group-numbered > li {
+
+    .list-group-numbered>li {
       font-size: 1.05rem;
       color: #59432e;
       padding-left: 28px;
@@ -147,10 +170,12 @@
       background: #fffaf0;
       margin-bottom: 6px;
     }
-    .list-group-numbered > li::marker {
+
+    .list-group-numbered>li::marker {
       color: #d97706;
       font-weight: 700;
     }
+
     .container.hero-section h3 {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
@@ -159,34 +184,42 @@
       margin-bottom: 30px;
       text-align: center;
     }
+
     .dish-card img {
       border-radius: 15px 0 0 15px;
-      box-shadow: 0 10px 15px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.08);
     }
+
     @media (max-width: 768px) {
       .hero-section {
         flex-direction: column;
         padding: 30px 20px;
       }
+
       .hero-section h2#judul {
         font-size: 2.2rem;
         text-align: center;
       }
+
       .hero-section p#definisi {
         max-width: 100%;
         text-align: center;
       }
+
       .hero-image {
         margin: 20px 0 0;
         width: 250px;
         height: 250px;
       }
     }
-    #tulis a{
+
+    #tulis a {
       text-decoration: none;
       color: white;
     }
-    #gambar1 img, #gambar2 img {
+
+    #gambar1 img,
+    #gambar2 img {
       display: block;
       width: 100%;
       height: auto;
@@ -194,15 +227,17 @@
       margin: 0;
       padding: 0;
     }
-    #gambar1, #gambar2 {
+
+    #gambar1,
+    #gambar2 {
       margin: 0;
       padding: 0;
     }
-      
   </style>
 </head>
+
 <body>
-    <!-- Navbar -->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light my-navbar-bg">
     <div class="container">
       <a class="navbar-brand" href="index.html"><img src="img/Logo.png" class="logo"></a>
@@ -239,22 +274,22 @@
       <p id="gambar"><img src="img/ayamgulai.png" alt="Ramen" class="hero-image" width="300"></p>
     </div>
   </div>
-  
-    <div class="container py-5">
-  <h1 id="resep" class="text-center mb-4"></h1>
 
-  <div class="row">
-    <!-- Bahan-bahan -->
-    <div class="col-md-6 mb-4">
-      <div class="card shadow-sm">
-        <div class="card-header bg-warning text-white">
-          <strong>Bahan-bahan</strong>
+  <div class="container py-5">
+    <h1 id="resep" class="text-center mb-4"></h1>
+
+    <div class="row">
+      <!-- Bahan-bahan -->
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-warning text-white">
+            <strong>Bahan-bahan</strong>
+          </div>
+          <ul id="bahan" class="list-group list-group-flush">
+
+          </ul>
         </div>
-        <ul id="bahan" class="list-group list-group-flush">
-          
-        </ul>
       </div>
-    </div>
 
       <!-- Cara Membuat -->
       <div class="col-md-6 mb-4">
@@ -287,7 +322,7 @@
               <div class="card-body">
                 <h5 id="menu1" class="card-title"></h5>
                 <p id="submenu1" class="card-text"></p>
-                <p id="tombol1" ><a href="ayam.html?nama=ayamlaos" class="btn btn-sm btn-primary">Lihat Resep</a></p>
+                <p id="tombol1"><a href="ayam.html?nama=ayamlaos" class="btn btn-sm btn-primary">Lihat Resep</a></p>
               </div>
             </div>
           </div>
@@ -310,11 +345,9 @@
           </div>
         </div>
       </div>
-    </div> 
-  </div> 
+    </div>
+  </div>
   <script src="ikan.js"></script>
 </body>
+
 </html>
-
-
-

@@ -1,25 +1,25 @@
 let kilo = prompt("Masukkan Berapa Kg Daging Ikan")
 const params = new URLSearchParams(window.location.search);
 const nama = params.get("nama");
-if (nama=="ikanbakar"){
-  document.getElementById("gambar1").innerHTML='<img src="img/gulaikepalakakap.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Gulai Kepala Kakap">'
-  document.getElementById("menu1").innerHTML='Gulai Kepala Kakap'
-  document.getElementById("submenu1").innerHTML='Kepala ikan kakap dalam kuah santan pedas dan harum rempah.'
-  document.getElementById("tombol1").innerHTML='<a href="ikan.html?nama=gulaikepalakakap" class="btn btn-sm btn-primary">Lihat Resep</a>'
-  document.getElementById("gambar2").innerHTML='<img src="img/ikanasampadeh.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ikan Asam Padeh">'
-  document.getElementById("menu2").innerHTML='Ikan Asam Padeh'
-  document.getElementById("submenu2").innerHTML='Ikan berkuah pedas asam tanpa santan, segar dan menggugah selera.'
-  document.getElementById("tombol2").innerHTML='<a href="ikan.html?nama=ikanasampadeh" class="btn btn-sm btn-primary">Lihat Resep</a>'
-  document.getElementById("gambar").innerHTML='<img src="img/ikanbakar.png" alt="Ikan Bakar Padang" class="hero-image" width="300">'
-  document.getElementById("judul").innerHTML="Ikan Bakar Padang"
-  document.getElementById("resep").innerHTML="🐟 Resep Ikan Bakar Padang"
-  document.getElementById("definisi").innerHTML="Ikan berbumbu kuning pedas yang dibakar hingga harum."
+if (nama == "ikanbakar") {
+  document.getElementById("gambar1").innerHTML = '<img src="img/gulaikepalakakap.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Gulai Kepala Kakap">'
+  document.getElementById("menu1").innerHTML = 'Gulai Kepala Kakap'
+  document.getElementById("submenu1").innerHTML = 'Kepala ikan kakap dalam kuah santan pedas dan harum rempah.'
+  document.getElementById("tombol1").innerHTML = '<a href="ikan.html?nama=gulaikepalakakap" class="btn btn-sm btn-primary">Lihat Resep</a>'
+  document.getElementById("gambar2").innerHTML = '<img src="img/ikanasampadeh.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ikan Asam Padeh">'
+  document.getElementById("menu2").innerHTML = 'Ikan Asam Padeh'
+  document.getElementById("submenu2").innerHTML = 'Ikan berkuah pedas asam tanpa santan, segar dan menggugah selera.'
+  document.getElementById("tombol2").innerHTML = '<a href="ikan.html?nama=ikanasampadeh" class="btn btn-sm btn-primary">Lihat Resep</a>'
+  document.getElementById("gambar").innerHTML = '<img src="img/ikanbakar.png" alt="Ikan Bakar Padang" class="hero-image" width="300">'
+  document.getElementById("judul").innerHTML = "Ikan Bakar Padang"
+  document.getElementById("resep").innerHTML = "🐟 Resep Ikan Bakar Padang"
+  document.getElementById("definisi").innerHTML = "Ikan berbumbu kuning pedas yang dibakar hingga harum."
   document.getElementById("bahan").innerHTML = ""
   document.getElementById("langkah").innerHTML = ""
-  for (let i = 1 ; i <= 15; i++){
+  for (let i = 1; i <= 15; i++) {
     document.getElementById("bahan").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
   }
-  for (let i = 100 ; i <= 107; i++){
+  for (let i = 100; i <= 107; i++) {
     document.getElementById("langkah").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
   }
   document.getElementById("100").innerHTML = "Siapkan bumbu halus, lalu blender atau uleg hingga halus.";
@@ -46,25 +46,25 @@ if (nama=="ikanbakar"){
   document.getElementById("14").innerHTML = "Garam dan penyedap rasa secukupnya (disesuaikan)";
   document.getElementById("15").innerHTML = "Minyak untuk menumis secukupnya";
 }
-else if (nama=="gulaikepalakakap"){
-  document.getElementById("gambar1").innerHTML='<img src="img/ikanbakar.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ikan Bakar Padang">'
-  document.getElementById("menu1").innerHTML='Ikan Bakar Padang'
-  document.getElementById("submenu1").innerHTML='Ikan berbumbu kuning pedas yang dibakar hingga harum.'
-  document.getElementById("tombol1").innerHTML='<a href="ikan.html?nama=ikanbakar" class="btn btn-sm btn-primary">Lihat Resep</a>'
-  document.getElementById("gambar2").innerHTML='<img src="img/ikanasampadeh.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ikan Asam Padeh">'
-  document.getElementById("menu2").innerHTML='Ikan Asam Padeh'
-  document.getElementById("submenu2").innerHTML='Ikan berkuah pedas asam tanpa santan, segar dan menggugah selera.'
-  document.getElementById("tombol2").innerHTML='<a href="ikan.html?nama=ikanasampadeh" class="btn btn-sm btn-primary">Lihat Resep</a>'
-  document.getElementById("gambar").innerHTML='<img src="img/gulaikepalakakap.png" alt="Gulai Kepala Kakap" class="hero-image" width="300">'
-  document.getElementById("judul").innerHTML="Gulai Kepala Kakap"
-  document.getElementById("resep").innerHTML="🐟 Resep Gulai Kepala Kakap"
-  document.getElementById("definisi").innerHTML="Kepala ikan kakap dalam kuah santan pedas dan harum rempah."
+else if (nama == "gulaikepalakakap") {
+  document.getElementById("gambar1").innerHTML = '<img src="img/ikanbakar.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ikan Bakar Padang">'
+  document.getElementById("menu1").innerHTML = 'Ikan Bakar Padang'
+  document.getElementById("submenu1").innerHTML = 'Ikan berbumbu kuning pedas yang dibakar hingga harum.'
+  document.getElementById("tombol1").innerHTML = '<a href="ikan.html?nama=ikanbakar" class="btn btn-sm btn-primary">Lihat Resep</a>'
+  document.getElementById("gambar2").innerHTML = '<img src="img/ikanasampadeh.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ikan Asam Padeh">'
+  document.getElementById("menu2").innerHTML = 'Ikan Asam Padeh'
+  document.getElementById("submenu2").innerHTML = 'Ikan berkuah pedas asam tanpa santan, segar dan menggugah selera.'
+  document.getElementById("tombol2").innerHTML = '<a href="ikan.html?nama=ikanasampadeh" class="btn btn-sm btn-primary">Lihat Resep</a>'
+  document.getElementById("gambar").innerHTML = '<img src="img/gulaikepalakakap.png" alt="Gulai Kepala Kakap" class="hero-image" width="300">'
+  document.getElementById("judul").innerHTML = "Gulai Kepala Kakap"
+  document.getElementById("resep").innerHTML = "🐟 Resep Gulai Kepala Kakap"
+  document.getElementById("definisi").innerHTML = "Kepala ikan kakap dalam kuah santan pedas dan harum rempah."
   document.getElementById("bahan").innerHTML = ""
   document.getElementById("langkah").innerHTML = ""
-  for (let i = 1 ; i <= 15; i++){
+  for (let i = 1; i <= 15; i++) {
     document.getElementById("bahan").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
   }
-  for (let i = 100 ; i <= 104; i++){
+  for (let i = 100; i <= 104; i++) {
     document.getElementById("langkah").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
   }
   document.getElementById("100").innerHTML = "Siapkan bahan. Cuci bersih kepala ikan, beri perasan lemon dan sedikit garam. Sisihkan. Haluskan bahan bumbu halus"
@@ -88,27 +88,27 @@ else if (nama=="gulaikepalakakap"){
   document.getElementById("14").innerHTML = kilo * 2000 + " ml santan (kara + air)";
   document.getElementById("15").innerHTML = "Garam dan gula secukupnya (disesuaikan dengan selera)";
 }
-else if (nama=="ikanasampadeh"){
-  document.getElementById("gambar1").innerHTML='<img src="img/ikanbakar.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ikan Bakar Padang">'
-  document.getElementById("menu1").innerHTML='Ikan Bakar Padang'
-  document.getElementById("submenu1").innerHTML='Ikan berbumbu kuning pedas yang dibakar hingga harum.'
-  document.getElementById("tombol1").innerHTML='<a href="ikan.html?nama=ikanbakar" class="btn btn-sm btn-primary">Lihat Resep</a>'
-  document.getElementById("gambar2").innerHTML='<img src="img/gulaikepalakakap.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Gulai Kepala Kakap">'
-  document.getElementById("menu2").innerHTML='Gulai Kepala Kakap'
-  document.getElementById("submenu2").innerHTML='Kepala ikan kakap dalam kuah santan pedas dan harum rempah.'
-  document.getElementById("tombol2").innerHTML='<a href="ikan.html?nama=gulaikepalakakap" class="btn btn-sm btn-primary">Lihat Resep</a>'
-  document.getElementById("gambar").innerHTML='<img src="img/ikanasampadeh.png" alt="Ikan Asam Padeh" class="hero-image" width="300">'
-  document.getElementById("judul").innerHTML="Ikan Asam Padeh"
-  document.getElementById("resep").innerHTML="🐟 Resep Ikan Asam Padeh"
-  document.getElementById("definisi").innerHTML="Ikan berkuah pedas asam tanpa santan, segar dan menggugah selera."
-  
+else if (nama == "ikanasampadeh") {
+  document.getElementById("gambar1").innerHTML = '<img src="img/ikanbakar.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ikan Bakar Padang">'
+  document.getElementById("menu1").innerHTML = 'Ikan Bakar Padang'
+  document.getElementById("submenu1").innerHTML = 'Ikan berbumbu kuning pedas yang dibakar hingga harum.'
+  document.getElementById("tombol1").innerHTML = '<a href="ikan.html?nama=ikanbakar" class="btn btn-sm btn-primary">Lihat Resep</a>'
+  document.getElementById("gambar2").innerHTML = '<img src="img/gulaikepalakakap.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Gulai Kepala Kakap">'
+  document.getElementById("menu2").innerHTML = 'Gulai Kepala Kakap'
+  document.getElementById("submenu2").innerHTML = 'Kepala ikan kakap dalam kuah santan pedas dan harum rempah.'
+  document.getElementById("tombol2").innerHTML = '<a href="ikan.html?nama=gulaikepalakakap" class="btn btn-sm btn-primary">Lihat Resep</a>'
+  document.getElementById("gambar").innerHTML = '<img src="img/ikanasampadeh.png" alt="Ikan Asam Padeh" class="hero-image" width="300">'
+  document.getElementById("judul").innerHTML = "Ikan Asam Padeh"
+  document.getElementById("resep").innerHTML = "🐟 Resep Ikan Asam Padeh"
+  document.getElementById("definisi").innerHTML = "Ikan berkuah pedas asam tanpa santan, segar dan menggugah selera."
+
   document.getElementById("bahan").innerHTML = ""
   document.getElementById("langkah").innerHTML = ""
- 
-  for (let i = 1 ; i <= 15; i++){
+
+  for (let i = 1; i <= 15; i++) {
     document.getElementById("bahan").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
   }
-  for (let i = 100 ; i <= 105; i++){
+  for (let i = 100; i <= 105; i++) {
     document.getElementById("langkah").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
   }
 
@@ -120,8 +120,8 @@ else if (nama=="ikanasampadeh"){
   document.getElementById("105").innerHTML = "Makanan siap disajikan.";
   document.getElementById("1").innerHTML = kilo * 1 + " kg ikan padang";
   document.getElementById("2").innerHTML = kilo * 10 + " buah tomat";
-  document.getElementById("3").innerHTML =  kilo * 5 + " sdt garam";
-  document.getElementById("4").innerHTML =  kilo * 7.5 + " sdt kaldu bubuk";
+  document.getElementById("3").innerHTML = kilo * 5 + " sdt garam";
+  document.getElementById("4").innerHTML = kilo * 7.5 + " sdt kaldu bubuk";
   document.getElementById("5").innerHTML = kilo * 3000 + " ml air";
   document.getElementById("6").innerHTML = kilo * 5 + " lembar daun salam";
   document.getElementById("7").innerHTML = kilo * 5 + " lembar daun kunyit";
@@ -132,6 +132,6 @@ else if (nama=="ikanasampadeh"){
   document.getElementById("12").innerHTML = kilo * 5 + " cm jahe";
   document.getElementById("13").innerHTML = kilo * 10 + " siung bawang putih";
   document.getElementById("14").innerHTML = kilo * 35 + " butir bawang merah";
-  document.getElementById("15").innerHTML =  kilo * 35 + " butir ketumbar";
-  
+  document.getElementById("15").innerHTML = kilo * 35 + " butir ketumbar";
+
 }

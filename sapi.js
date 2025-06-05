@@ -1,29 +1,29 @@
 let kilo = prompt("Masukkan Berapa Kg Daging Sapi")
 const params = new URLSearchParams(window.location.search);
 const nama = params.get("nama");
-if (nama=="dendeng"){
-    document.getElementById("gambar1").innerHTML='<img src="img/rendang.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Rendang">'
-    document.getElementById("menu1").innerHTML='Rendang'
-    document.getElementById("submenu1").innerHTML='Daging sapi yang dimasak lama dengan santan dan rempah hingga kering dan berwarna cokelat gelap, menghasilkan rasa gurih pedas yang kaya.'
-    document.getElementById("tombol1").innerHTML='<a href="sapi.html?nama=rendang" class="btn btn-sm btn-primary">Lihat Resep</a>'
-    
-    document.getElementById("gambar2").innerHTML='<img src="img/tambusu.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Gulai Tambusu">'
-    document.getElementById("menu2").innerHTML='Gulai Tambusu'
-    document.getElementById("submenu2").innerHTML='Usus sapi yang diisi adonan telur dan tahu berbumbu, lalu dikukus dan disajikan dengan kuah gulai kental khas Minang.'
-    document.getElementById("tombol2").innerHTML='<a href="sapi.html?nama=tambusu" class="btn btn-sm btn-primary">Lihat Resep</a>'
-    
-    
-    document.getElementById("gambar").innerHTML='<img src="img/dendeng.png" alt="Dendeng" class="hero-image" width="300">'
-    document.getElementById("judul").innerHTML="Dendeng Batokok"
-    document.getElementById("resep").innerHTML="🍖 Resep Dendeng Batokok"
-    document.getElementById("definisi").innerHTML="Irisan tipis daging sapi yang digoreng kering, disajikan dengan sambal balado atau bumbu hitam pekat yang pedas dan gurih."
-    
+if (nama == "dendeng") {
+    document.getElementById("gambar1").innerHTML = '<img src="img/rendang.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Rendang">'
+    document.getElementById("menu1").innerHTML = 'Rendang'
+    document.getElementById("submenu1").innerHTML = 'Daging sapi yang dimasak lama dengan santan dan rempah hingga kering dan berwarna cokelat gelap, menghasilkan rasa gurih pedas yang kaya.'
+    document.getElementById("tombol1").innerHTML = '<a href="sapi.html?nama=rendang" class="btn btn-sm btn-primary">Lihat Resep</a>'
+
+    document.getElementById("gambar2").innerHTML = '<img src="img/tambusu.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Gulai Tambusu">'
+    document.getElementById("menu2").innerHTML = 'Gulai Tambusu'
+    document.getElementById("submenu2").innerHTML = 'Usus sapi yang diisi adonan telur dan tahu berbumbu, lalu dikukus dan disajikan dengan kuah gulai kental khas Minang.'
+    document.getElementById("tombol2").innerHTML = '<a href="sapi.html?nama=tambusu" class="btn btn-sm btn-primary">Lihat Resep</a>'
+
+
+    document.getElementById("gambar").innerHTML = '<img src="img/dendeng.png" alt="Dendeng" class="hero-image" width="300">'
+    document.getElementById("judul").innerHTML = "Dendeng Batokok"
+    document.getElementById("resep").innerHTML = "🍖 Resep Dendeng Batokok"
+    document.getElementById("definisi").innerHTML = "Irisan tipis daging sapi yang digoreng kering, disajikan dengan sambal balado atau bumbu hitam pekat yang pedas dan gurih."
+
     document.getElementById("bahan").innerHTML = ""
     document.getElementById("langkah").innerHTML = ""
-    for (let i = 1 ; i <= 17; i++){
+    for (let i = 1; i <= 17; i++) {
         document.getElementById("bahan").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
     }
-    for (let i = 100 ; i <= 104; i++){
+    for (let i = 100; i <= 104; i++) {
         document.getElementById("langkah").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
     }
     document.getElementById("100").innerHTML = "Potong-potong daging, aku potong menjadi 10 slice. Cuci bersih. Haluskan bumbu halus, lalu tumis dengan minyak goreng. Tambahkan air, rebus daging. Masukan lengkuas geprek, sereh, dan daun salam.. rebus daging hingga empuk"
@@ -48,30 +48,30 @@ if (nama=="dendeng"){
     document.getElementById("15").innerHTML = "Secukupnya minyak goreng";
     document.getElementById("16").innerHTML = "Secukupnya Royco atau penyedap";
     document.getElementById("17").innerHTML = "Secukupnya garam";
-    
+
 }
-else if (nama=="rendang"){
-    document.getElementById("gambar1").innerHTML='<img src="img/dendeng.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Dendeng">'
-    document.getElementById("menu1").innerHTML='Dendeng Batokok'
-    document.getElementById("submenu1").innerHTML='Irisan tipis daging sapi yang digoreng kering, disajikan dengan sambal balado atau bumbu hitam pekat yang pedas dan gurih.'
-    document.getElementById("tombol1").innerHTML='<a href="sapi.html?nama=dendeng" class="btn btn-sm btn-primary">Lihat Resep</a>'
-    
-    document.getElementById("gambar2").innerHTML='<img src="img/tambusu.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Gulai Tambusu">'
-    document.getElementById("menu2").innerHTML='Gulai Tambusu'
-    document.getElementById("submenu2").innerHTML='Usus sapi yang diisi adonan telur dan tahu berbumbu, lalu dikukus dan disajikan dengan kuah gulai kental khas Minang.'
-    document.getElementById("tombol2").innerHTML='<a href="sapi.html?nama=tambusu" class="btn btn-sm btn-primary">Lihat Resep</a>'
-    
-    document.getElementById("gambar").innerHTML='<img src="img/rendang.png" alt="Rendang" class="hero-image" width="300">'
-    document.getElementById("judul").innerHTML="Rendang"
-    document.getElementById("resep").innerHTML="🍖 Resep Rendang"
-    document.getElementById("definisi").innerHTML="Daging sapi yang dimasak lama dengan santan dan rempah hingga kering dan berwarna cokelat gelap, menghasilkan rasa gurih pedas yang kaya."
-    
+else if (nama == "rendang") {
+    document.getElementById("gambar1").innerHTML = '<img src="img/dendeng.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Dendeng">'
+    document.getElementById("menu1").innerHTML = 'Dendeng Batokok'
+    document.getElementById("submenu1").innerHTML = 'Irisan tipis daging sapi yang digoreng kering, disajikan dengan sambal balado atau bumbu hitam pekat yang pedas dan gurih.'
+    document.getElementById("tombol1").innerHTML = '<a href="sapi.html?nama=dendeng" class="btn btn-sm btn-primary">Lihat Resep</a>'
+
+    document.getElementById("gambar2").innerHTML = '<img src="img/tambusu.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Gulai Tambusu">'
+    document.getElementById("menu2").innerHTML = 'Gulai Tambusu'
+    document.getElementById("submenu2").innerHTML = 'Usus sapi yang diisi adonan telur dan tahu berbumbu, lalu dikukus dan disajikan dengan kuah gulai kental khas Minang.'
+    document.getElementById("tombol2").innerHTML = '<a href="sapi.html?nama=tambusu" class="btn btn-sm btn-primary">Lihat Resep</a>'
+
+    document.getElementById("gambar").innerHTML = '<img src="img/rendang.png" alt="Rendang" class="hero-image" width="300">'
+    document.getElementById("judul").innerHTML = "Rendang"
+    document.getElementById("resep").innerHTML = "🍖 Resep Rendang"
+    document.getElementById("definisi").innerHTML = "Daging sapi yang dimasak lama dengan santan dan rempah hingga kering dan berwarna cokelat gelap, menghasilkan rasa gurih pedas yang kaya."
+
     document.getElementById("bahan").innerHTML = ""
     document.getElementById("langkah").innerHTML = ""
-    for (let i = 1 ; i <= 21; i++){
+    for (let i = 1; i <= 21; i++) {
         document.getElementById("bahan").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
     }
-    for (let i = 100 ; i <= 106; i++){
+    for (let i = 100; i <= 106; i++) {
         document.getElementById("langkah").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
     }
     document.getElementById("100").innerHTML = "Tumis bumbu halus bersama daun jeruk, daun salam, daun kunyit, kayu manis, kapu laga, kembang lawang, cengkeh dan serai hingga harum dan matang."
@@ -103,28 +103,28 @@ else if (nama=="rendang"){
     document.getElementById("20").innerHTML = kilo * 0.5 + " sdt jinten";
     document.getElementById("21").innerHTML = kilo + " buah pala";
 }
-else if (nama=="tambusu"){
-    document.getElementById("gambar1").innerHTML='<img src="img/dendeng.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Dendeng Batokok">'
-    document.getElementById("menu1").innerHTML='Dendeng Batokok'
-    document.getElementById("submenu1").innerHTML='Dendeng Batokok'
-    document.getElementById("tombol1").innerHTML='<a href="sapi.html?nama=dendeng" class="btn btn-sm btn-primary">Lihat Resep</a>'
-    
-    document.getElementById("gambar2").innerHTML='<img src="img/rendang.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Rendang">'
-    document.getElementById("menu2").innerHTML='Rendang'
-    document.getElementById("submenu2").innerHTML='Daging sapi yang dimasak lama dengan santan dan rempah hingga kering dan berwarna cokelat gelap, menghasilkan rasa gurih pedas yang kaya.'
-    document.getElementById("tombol2").innerHTML='<a href="sapi.html?nama=rendang" class="btn btn-sm btn-primary">Lihat Resep</a>'
-    
-    document.getElementById("gambar").innerHTML='<img src="img/tambusu.png" alt="Tambusu" class="hero-image" width="300">'
-    document.getElementById("judul").innerHTML="Gulai Tambusu"
-    document.getElementById("resep").innerHTML="🍖 Resep Gulai Tambusu"
-    document.getElementById("definisi").innerHTML="Usus sapi yang diisi adonan telur dan tahu berbumbu, lalu dikukus dan disajikan dengan kuah gulai kental khas Minang.  "
-    
+else if (nama == "tambusu") {
+    document.getElementById("gambar1").innerHTML = '<img src="img/dendeng.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Dendeng Batokok">'
+    document.getElementById("menu1").innerHTML = 'Dendeng Batokok'
+    document.getElementById("submenu1").innerHTML = 'Dendeng Batokok'
+    document.getElementById("tombol1").innerHTML = '<a href="sapi.html?nama=dendeng" class="btn btn-sm btn-primary">Lihat Resep</a>'
+
+    document.getElementById("gambar2").innerHTML = '<img src="img/rendang.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Rendang">'
+    document.getElementById("menu2").innerHTML = 'Rendang'
+    document.getElementById("submenu2").innerHTML = 'Daging sapi yang dimasak lama dengan santan dan rempah hingga kering dan berwarna cokelat gelap, menghasilkan rasa gurih pedas yang kaya.'
+    document.getElementById("tombol2").innerHTML = '<a href="sapi.html?nama=rendang" class="btn btn-sm btn-primary">Lihat Resep</a>'
+
+    document.getElementById("gambar").innerHTML = '<img src="img/tambusu.png" alt="Tambusu" class="hero-image" width="300">'
+    document.getElementById("judul").innerHTML = "Gulai Tambusu"
+    document.getElementById("resep").innerHTML = "🍖 Resep Gulai Tambusu"
+    document.getElementById("definisi").innerHTML = "Usus sapi yang diisi adonan telur dan tahu berbumbu, lalu dikukus dan disajikan dengan kuah gulai kental khas Minang.  "
+
     document.getElementById("bahan").innerHTML = ""
     document.getElementById("langkah").innerHTML = ""
-    for (let i = 1 ; i <= 21; i++){
+    for (let i = 1; i <= 21; i++) {
         document.getElementById("bahan").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
     }
-    for (let i = 100 ; i <= 105; i++){
+    for (let i = 100; i <= 105; i++) {
         document.getElementById("langkah").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
     }
     document.getElementById("100").innerHTML = "Haluskan bumbu, tambahkan tahu kemudian haluskna kembali"

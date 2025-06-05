@@ -6,25 +6,25 @@ if (kilo === null || isNaN(kilo) || kilo.trim() === "") {
   kilo = 1;
 }
 kilo = parseFloat(kilo);
-if (nama=="ayamgulai"){
-  document.getElementById("gambar1").innerHTML='<img src="img/ayamgorenglaos.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ayam Goreng Laos">'
-  document.getElementById("menu1").innerHTML='Ayam Goreng Laos'
-  document.getElementById("submenu1").innerHTML='Ayam dengan taburan laos yang gurih dan wangi.'
-  document.getElementById("tombol1").innerHTML='<a href="ayam.html?nama=ayamlaos" class="btn btn-sm btn-primary">Lihat Resep</a>'
-  document.getElementById("gambar2").innerHTML='<img src="img/ayampop.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ayam Pop">'
-  document.getElementById("menu2").innerHTML='Ayam Pop'
-  document.getElementById("submenu2").innerHTML='Ayam rebus khas  dengan rasa gurih lembut.'
-  document.getElementById("tombol2").innerHTML='<a href="ayam.html?nama=ayampop" class="btn btn-sm btn-primary">Lihat Resep</a>'
-  document.getElementById("gambar").innerHTML='<img src="img/ayamgulai.png" alt="Ramen" class="hero-image" width="300">'
-  document.getElementById("judul").innerHTML="Ayam Gulai"
-  document.getElementById("resep").innerHTML="🍛 Resep Gulai Ayam"
-  document.getElementById("definisi").innerHTML="Ayam Gulai adalah masakan khas Sumatera Barat yang kaya rempah dan dikenal karena kuahnya yang kental, berwarna kuning keemasan, dan rasanya yang gurih dengan sedikit sentuhan pedas."
+if (nama == "ayamgulai") {
+  document.getElementById("gambar1").innerHTML = '<img src="img/ayamgorenglaos.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ayam Goreng Laos">'
+  document.getElementById("menu1").innerHTML = 'Ayam Goreng Laos'
+  document.getElementById("submenu1").innerHTML = 'Ayam dengan taburan laos yang gurih dan wangi.'
+  document.getElementById("tombol1").innerHTML = '<a href="ayam.html?nama=ayamlaos" class="btn btn-sm btn-primary">Lihat Resep</a>'
+  document.getElementById("gambar2").innerHTML = '<img src="img/ayampop.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ayam Pop">'
+  document.getElementById("menu2").innerHTML = 'Ayam Pop'
+  document.getElementById("submenu2").innerHTML = 'Ayam rebus khas  dengan rasa gurih lembut.'
+  document.getElementById("tombol2").innerHTML = '<a href="ayam.html?nama=ayampop" class="btn btn-sm btn-primary">Lihat Resep</a>'
+  document.getElementById("gambar").innerHTML = '<img src="img/ayamgulai.png" alt="Ramen" class="hero-image" width="300">'
+  document.getElementById("judul").innerHTML = "Ayam Gulai"
+  document.getElementById("resep").innerHTML = "🍛 Resep Gulai Ayam"
+  document.getElementById("definisi").innerHTML = "Ayam Gulai adalah masakan khas Sumatera Barat yang kaya rempah dan dikenal karena kuahnya yang kental, berwarna kuning keemasan, dan rasanya yang gurih dengan sedikit sentuhan pedas."
   document.getElementById("bahan").innerHTML = ""
   document.getElementById("langkah").innerHTML = ""
-  for (let i = 1 ; i <= 14; i++){
+  for (let i = 1; i <= 14; i++) {
     document.getElementById("bahan").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
   }
-  for (let i = 100 ; i <= 104; i++){
+  for (let i = 100; i <= 104; i++) {
     document.getElementById("langkah").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
   }
   document.getElementById("100").innerHTML = "Blender semua bumbu halus, lalu tumis hingga wangi."
@@ -47,25 +47,25 @@ if (nama=="ayamgulai"){
   document.getElementById("13").innerHTML = (kilo * 0.5) + " sdt merica (opsional)";
   document.getElementById("14").innerHTML = kilo * 2 + " buah kentang, potong dadu";
 }
-else if (nama=="ayamlaos"){
-  document.getElementById("gambar1").innerHTML='<img src="img/ayamgulai.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ayam Goreng Laos">'
-  document.getElementById("menu1").innerHTML='Ayam Gulai'
-  document.getElementById("submenu1").innerHTML='Ayam dengan kuah kuning kental gurih.'
-  document.getElementById("tombol1").innerHTML='<a href="ayam.html?nama=ayamgulai" class="btn btn-sm btn-primary">Lihat Resep</a>'
-  document.getElementById("gambar2").innerHTML='<img src="img/ayampop.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ayam Pop">'
-  document.getElementById("menu2").innerHTML='Ayam Pop'
-  document.getElementById("submenu2").innerHTML='Ayam rebus khas Padang dengan rasa gurih lembut.'
-  document.getElementById("tombol2").innerHTML='<a href="ayam.html?nama=ayampop" class="btn btn-sm btn-primary">Lihat Resep</a>'
-  document.getElementById("gambar").innerHTML='<img src="img/ayamgorenglaos.png" alt="Ayam Goreng Laos" class="hero-image" width="300">'
-  document.getElementById("judul").innerHTML="Ayam Goreng Laos"
-  document.getElementById("resep").innerHTML="🍛 Resep Ayam Goreng Laos"
-  document.getElementById("definisi").innerHTML="Ayam Goreng Laos adalah hidangan ayam goreng khas Minangkabau, Sumatera Barat, yang terkenal dengan penggunaan bumbu lengkuas parut sebagai ciri khasnya."
+else if (nama == "ayamlaos") {
+  document.getElementById("gambar1").innerHTML = '<img src="img/ayamgulai.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ayam Goreng Laos">'
+  document.getElementById("menu1").innerHTML = 'Ayam Gulai'
+  document.getElementById("submenu1").innerHTML = 'Ayam dengan kuah kuning kental gurih.'
+  document.getElementById("tombol1").innerHTML = '<a href="ayam.html?nama=ayamgulai" class="btn btn-sm btn-primary">Lihat Resep</a>'
+  document.getElementById("gambar2").innerHTML = '<img src="img/ayampop.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ayam Pop">'
+  document.getElementById("menu2").innerHTML = 'Ayam Pop'
+  document.getElementById("submenu2").innerHTML = 'Ayam rebus khas Padang dengan rasa gurih lembut.'
+  document.getElementById("tombol2").innerHTML = '<a href="ayam.html?nama=ayampop" class="btn btn-sm btn-primary">Lihat Resep</a>'
+  document.getElementById("gambar").innerHTML = '<img src="img/ayamgorenglaos.png" alt="Ayam Goreng Laos" class="hero-image" width="300">'
+  document.getElementById("judul").innerHTML = "Ayam Goreng Laos"
+  document.getElementById("resep").innerHTML = "🍛 Resep Ayam Goreng Laos"
+  document.getElementById("definisi").innerHTML = "Ayam Goreng Laos adalah hidangan ayam goreng khas Minangkabau, Sumatera Barat, yang terkenal dengan penggunaan bumbu lengkuas parut sebagai ciri khasnya."
   document.getElementById("bahan").innerHTML = ""
   document.getElementById("langkah").innerHTML = ""
-  for (let i = 1 ; i <= 15; i++){
+  for (let i = 1; i <= 15; i++) {
     document.getElementById("bahan").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
   }
-  for (let i = 100 ; i <= 104; i++){
+  for (let i = 100; i <= 104; i++) {
     document.getElementById("langkah").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
   }
   document.getElementById("100").innerHTML = "Bawang putih, kemiri, ketumbar, jahe, kunyit dihaluskan. Lengkuas dicacah sampai halus."
@@ -89,26 +89,26 @@ else if (nama=="ayamlaos"){
   document.getElementById("14").innerHTML = kilo * 3 + " lembar daun salam";
   document.getElementById("15").innerHTML = kilo * 3 + " lembar daun jeruk";
 }
-else if (nama=="ayampop"){
-  document.getElementById("gambar1").innerHTML='<img src="img/ayamgulai.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ayam Goreng Laos">'
-  document.getElementById("menu1").innerHTML='Ayam Gulai'
-  document.getElementById("submenu1").innerHTML='Ayam dengan kuah kuning kental gurih.'
-  document.getElementById("tombol1").innerHTML='<a href="ayam.html?nama=ayamgulai" class="btn btn-sm btn-primary">Lihat Resep</a>'
-  document.getElementById("gambar2").innerHTML='<img src="img/ayamgorenglaos.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ayam Goreng Laos">'
-  document.getElementById("menu2").innerHTML='Ayam Goreng Laos'
-  document.getElementById("submenu2").innerHTML='Ayam dengan taburan laos yang gurih dan wangi.'
-  document.getElementById("tombol2").innerHTML='<a href="ayam.html?nama=ayamlaos" class="btn btn-sm btn-primary">Lihat Resep</a>'
-  document.getElementById("gambar").innerHTML='<img src="img/ayampop.png" alt="Ramen" class="hero-image" width="300">'
-  document.getElementById("judul").innerHTML="Ayam Pop"
-  document.getElementById("resep").innerHTML="🍛 Resep Ayam Pop"
-  document.getElementById("definisi").innerHTML="Ayam pop adalah hidangan ayam goreng khas Padang yang memiliki ciri khas warna putih pucat dan tekstur empuk."
-  
+else if (nama == "ayampop") {
+  document.getElementById("gambar1").innerHTML = '<img src="img/ayamgulai.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ayam Goreng Laos">'
+  document.getElementById("menu1").innerHTML = 'Ayam Gulai'
+  document.getElementById("submenu1").innerHTML = 'Ayam dengan kuah kuning kental gurih.'
+  document.getElementById("tombol1").innerHTML = '<a href="ayam.html?nama=ayamgulai" class="btn btn-sm btn-primary">Lihat Resep</a>'
+  document.getElementById("gambar2").innerHTML = '<img src="img/ayamgorenglaos.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ayam Goreng Laos">'
+  document.getElementById("menu2").innerHTML = 'Ayam Goreng Laos'
+  document.getElementById("submenu2").innerHTML = 'Ayam dengan taburan laos yang gurih dan wangi.'
+  document.getElementById("tombol2").innerHTML = '<a href="ayam.html?nama=ayamlaos" class="btn btn-sm btn-primary">Lihat Resep</a>'
+  document.getElementById("gambar").innerHTML = '<img src="img/ayampop.png" alt="Ramen" class="hero-image" width="300">'
+  document.getElementById("judul").innerHTML = "Ayam Pop"
+  document.getElementById("resep").innerHTML = "🍛 Resep Ayam Pop"
+  document.getElementById("definisi").innerHTML = "Ayam pop adalah hidangan ayam goreng khas Padang yang memiliki ciri khas warna putih pucat dan tekstur empuk."
+
   document.getElementById("bahan").innerHTML = ""
   document.getElementById("langkah").innerHTML = ""
-  for (let i = 1 ; i <= 13; i++){
+  for (let i = 1; i <= 13; i++) {
     document.getElementById("bahan").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
   }
-  for (let i = 100 ; i <= 103; i++){
+  for (let i = 100; i <= 103; i++) {
     document.getElementById("langkah").innerHTML += '<li class="list-group-item" id =' + i + '></li>'
   }
   document.getElementById("100").innerHTML = "Haluskan bumbu halus lalu tumis sebentar dengan minyak panas beserta daun salam, daun jeruk, lengkuas, jahe dan sereh hingga harum"
