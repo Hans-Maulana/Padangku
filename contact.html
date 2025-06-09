@@ -14,7 +14,7 @@
   <script type="text/javascript">
     (function () {
       emailjs.init({
-        publicKey: "q1XSpNlm8UTGtUKAM",
+        publicKey: "jqQnkqgmXsXIlRA2w",
       });
     })();
   </script>
@@ -181,13 +181,14 @@
       width: 100px;
     }
 
-    .foot{
+    .foot {
       margin-top: 15px;
       justify-content: center;
       display: flex;
       column-gap: 100px;
     }
-    #container{
+
+    #container {
       padding-top: 60px;
     }
   </style>
@@ -272,6 +273,15 @@
         },
       });
     });
+    function sendMail() {
+      let params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        pesan: document.getElementById("message").value,
+      }
+      emailjs.send("service_m1kiv8s", "template_26k9gi9", params)
+      emailjs.send("service_m1kiv8s", "template_4nz5b67", params)
+    }
   </script>
   <div class="foot">
     <div>
@@ -280,12 +290,13 @@
       </a>
     </div>
     <div>
-      <a href="https://www.instagram.com/padangku_indonesia?igsh=MWVxaHZkbDFjaG9vcA%3D%3D&utm_source=qr" target="_blank" style="font-size: 40px; color:#d97706 ;">
+      <a href="https://www.instagram.com/padangku_indonesia?igsh=MWVxaHZkbDFjaG9vcA%3D%3D&utm_source=qr" target="_blank"
+        style="font-size: 40px; color:#d97706 ;">
         <i class="fab fa-instagram"></i>
       </a>
     </div>
     <div>
-      <a href="https://wa.me/62895360828717" target="_blank" style="font-size: 40px; color:#d97706;">
+      <a href="https://x.com/Padangku2011" target="_blank" style="font-size: 40px; color:#d97706;">
         <i class="fab fa-twitter"></i>
       </a>
     </div>
