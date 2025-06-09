@@ -32,8 +32,8 @@
       object-fit: cover;
       border-radius: 20px;
     }
-    
-    #demo{
+
+    #demo {
       height: 150px;
     }
 
@@ -124,11 +124,11 @@
       display: flex;
     }
 
-    .card{
+    .card {
       height: 280px;
     }
 
-    #bawah{
+    #bawah {
       margin-bottom: 10px;
     }
 
@@ -136,22 +136,53 @@
       .tampil {
         display: none;
       }
+
       .carousel-inner img {
         width: 100%;
         height: 250px;
         object-fit: cover;
         border-radius: 20px;
       }
-      #demo{
+
+      #demo {
         height: 250px;
       }
+
       .card-img-top {
         height: 150px;
         object-fit: cover;
         border-bottom: 1px solid #f1e2c6;
       }
-      .card{
+
+      .card {
         height: 300px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .tampil {
+        display: none;
+      }
+
+      .carousel-inner img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+
+      #demo {
+        height: 350px;
+      }
+
+      .card-img-top {
+        height: 250px;
+        object-fit: cover;
+        border-bottom: 1px solid #f1e2c6;
+      }
+
+      .card {
+        height: 380px;
       }
     }
   </style>
@@ -347,10 +378,10 @@
         const button = section.find('.next-btn');
 
         if (isSmallScreen) {
-          cards.show();        
-          button.hide();       
+          cards.show();
+          button.hide();
         } else {
-          
+
           if (!button.data('showing')) {
             cards.hide().eq(0).show();
           }
