@@ -7,6 +7,7 @@ if (kilo === null || isNaN(kilo) || kilo.trim() === "") {
 }
 kilo = parseFloat(kilo);
 if (nama == "ayamgulai") {
+  document.getElementById("bintang").innerHTML = '⭐⭐⭐⭐⭐'
   document.getElementById("gambar1").innerHTML = '<img src="img/ayamgorenglaos.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ayam Goreng Laos">'
   document.getElementById("menu1").innerHTML = 'Ayam Goreng Laos'
   document.getElementById("submenu1").innerHTML = 'Ayam dengan taburan laos yang gurih dan wangi.'
@@ -48,6 +49,7 @@ if (nama == "ayamgulai") {
   document.getElementById("14").innerHTML = kilo * 2 + " buah kentang, potong dadu";
 }
 else if (nama == "ayamlaos") {
+  document.getElementById("bintang").innerHTML = '⭐⭐⭐⭐'
   document.getElementById("gambar1").innerHTML = '<img src="img/ayamgulai.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ayam Goreng Laos">'
   document.getElementById("menu1").innerHTML = 'Ayam Gulai'
   document.getElementById("submenu1").innerHTML = 'Ayam dengan kuah kuning kental gurih.'
@@ -90,6 +92,7 @@ else if (nama == "ayamlaos") {
   document.getElementById("15").innerHTML = kilo * 3 + " lembar daun jeruk";
 }
 else if (nama == "ayampop") {
+  document.getElementById("bintang").innerHTML = '⭐⭐⭐⭐'
   document.getElementById("gambar1").innerHTML = '<img src="img/ayamgulai.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ayam Goreng Laos">'
   document.getElementById("menu1").innerHTML = 'Ayam Gulai'
   document.getElementById("submenu1").innerHTML = 'Ayam dengan kuah kuning kental gurih.'
