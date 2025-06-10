@@ -2,6 +2,7 @@ let kilo = prompt("Masukkan Berapa Kg Daging Ikan")
 const params = new URLSearchParams(window.location.search);
 const nama = params.get("nama");
 if (nama == "ikanbakar") {
+  document.getElementById("bintang").innerHTML = '⭐⭐⭐⭐⭐'
   document.getElementById("gambar1").innerHTML = '<img src="img/gulaikepalakakap.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Gulai Kepala Kakap">'
   document.getElementById("menu1").innerHTML = 'Gulai Kepala Kakap'
   document.getElementById("submenu1").innerHTML = 'Kepala ikan kakap dalam kuah santan pedas dan harum rempah.'
@@ -47,6 +48,7 @@ if (nama == "ikanbakar") {
   document.getElementById("15").innerHTML = "Minyak untuk menumis secukupnya";
 }
 else if (nama == "gulaikepalakakap") {
+  document.getElementById("bintang").innerHTML = '⭐⭐⭐⭐⭐'
   document.getElementById("gambar1").innerHTML = '<img src="img/ikanbakar.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ikan Bakar Padang">'
   document.getElementById("menu1").innerHTML = 'Ikan Bakar Padang'
   document.getElementById("submenu1").innerHTML = 'Ikan berbumbu kuning pedas yang dibakar hingga harum.'
@@ -89,6 +91,7 @@ else if (nama == "gulaikepalakakap") {
   document.getElementById("15").innerHTML = "Garam dan gula secukupnya (disesuaikan dengan selera)";
 }
 else if (nama == "ikanasampadeh") {
+  document.getElementById("bintang").innerHTML = '⭐⭐⭐'
   document.getElementById("gambar1").innerHTML = '<img src="img/ikanbakar.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Ikan Bakar Padang">'
   document.getElementById("menu1").innerHTML = 'Ikan Bakar Padang'
   document.getElementById("submenu1").innerHTML = 'Ikan berbumbu kuning pedas yang dibakar hingga harum.'
