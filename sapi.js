@@ -52,7 +52,7 @@ if (nama == "dendeng") {
 
 }
 else if (nama == "rendang") {
-    document.getElementById("bintang").innerHTML = '⭐⭐⭐⭐'
+    document.getElementById("bintang").innerHTML = '⭐⭐⭐⭐⭐'
     document.getElementById("gambar1").innerHTML = '<img src="img/dendeng.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Dendeng">'
     document.getElementById("menu1").innerHTML = 'Dendeng Batokok'
     document.getElementById("submenu1").innerHTML = 'Irisan tipis daging sapi yang digoreng kering, disajikan dengan sambal balado atau bumbu hitam pekat yang pedas dan gurih.'
