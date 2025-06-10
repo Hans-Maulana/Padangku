@@ -2,6 +2,7 @@ let kilo = prompt("Masukkan Berapa Kg Daging Sapi")
 const params = new URLSearchParams(window.location.search);
 const nama = params.get("nama");
 if (nama == "dendeng") {
+    document.getElementById("bintang").innerHTML = '⭐⭐⭐⭐'
     document.getElementById("gambar1").innerHTML = '<img src="img/rendang.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Rendang">'
     document.getElementById("menu1").innerHTML = 'Rendang'
     document.getElementById("submenu1").innerHTML = 'Daging sapi yang dimasak lama dengan santan dan rempah hingga kering dan berwarna cokelat gelap, menghasilkan rasa gurih pedas yang kaya.'
@@ -51,6 +52,7 @@ if (nama == "dendeng") {
 
 }
 else if (nama == "rendang") {
+    document.getElementById("bintang").innerHTML = '⭐⭐⭐⭐'
     document.getElementById("gambar1").innerHTML = '<img src="img/dendeng.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Dendeng">'
     document.getElementById("menu1").innerHTML = 'Dendeng Batokok'
     document.getElementById("submenu1").innerHTML = 'Irisan tipis daging sapi yang digoreng kering, disajikan dengan sambal balado atau bumbu hitam pekat yang pedas dan gurih.'
@@ -104,6 +106,7 @@ else if (nama == "rendang") {
     document.getElementById("21").innerHTML = kilo + " buah pala";
 }
 else if (nama == "tambusu") {
+    document.getElementById("bintang").innerHTML = '⭐⭐⭐⭐'
     document.getElementById("gambar1").innerHTML = '<img src="img/dendeng.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Dendeng Batokok">'
     document.getElementById("menu1").innerHTML = 'Dendeng Batokok'
     document.getElementById("submenu1").innerHTML = 'Dendeng Batokok'
