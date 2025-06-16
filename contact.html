@@ -50,7 +50,8 @@
 
     .contact-form-container {
       flex: 1 1 300px;
-      max-width: 450px;
+      max-width: 500px;
+
     }
 
     form#contactForm {
@@ -132,12 +133,13 @@
     }
 
     .foot {
-      margin-top: 15px;
-      justify-content: center;
       display: flex;
-      column-gap: 100px;
-      margin-bottom: 10px;
+      justify-content: space-evenly;
+      background-color: #fff9f0;
+      padding: 20px 0;
+      margin-top: auto;
     }
+
 
     .foot a {
       font-size: 40px;
@@ -156,6 +158,36 @@
       background-color: #fff9f0;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
       font-weight: 600;
+    }
+    .gambar{
+      display: none;
+    }
+    .contact-form-container{
+      display: flex;
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+
+
+    @media (min-width: 1024px) {
+      .gambar {
+        display: block;
+      }
+
+      .contact-form-container {
+        position: absolute;
+        margin-top: -550px;
+        margin-left: 80px;
+
+      }
+
+      .gambar img {
+        width: 100%;
+        height: 600px;
+      }
+
     }
   </style>
 </head>
@@ -186,31 +218,30 @@
     </div>
   </nav>
 
-  <!-- Contact Layout -->
-  <div class="contact-layout container">
-    <!-- Gambar kiri -->
-    <div class="contact-illustration">
-      <img src="img/ayamgulai.png" alt="Contact Illustration">
-    </div>
 
-    <!-- Form kanan -->
-    <div class="contact-form-container">
-      <form id="contactForm" novalidate>
-        <h2 class="kelasberat"><i class="fas fa-envelope-open-text"></i>Contact</h2>
 
-        <label for="name">Name *</label>
-        <input type="text" id="name" name="name" placeholder="Your Name..." required minlength="3" />
-
-        <label for="email">E-mail *</label>
-        <input type="email" id="email" name="email" placeholder="Your E-mail Address..." required />
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Your Message..." required minlength="10"></textarea>
-
-        <button type="submit" onclick="sendMail()">Send</button>
-      </form>
-    </div>
+  <div class="gambar">
+    <img src="img/kontak.png" alt="Contact Illustration">
   </div>
+
+
+  <div class="contact-form-container">
+    <form id="contactForm" novalidate>
+      <h2 class="kelasberat"><i class="fas fa-envelope-open-text"></i>Contact</h2>
+
+      <label for="name">Name *</label>
+      <input type="text" id="name" name="name" placeholder="Your Name..." required minlength="3" />
+
+      <label for="email">E-mail *</label>
+      <input type="email" id="email" name="email" placeholder="Your E-mail Address..." required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Your Message..." required minlength="10"></textarea>
+
+      <button type="submit" onclick="sendMail()">Send</button>
+    </form>
+  </div>
+
 
   <!-- Script Validasi -->
   <script>
@@ -259,7 +290,8 @@
   <!-- Footer -->
   <div class="foot">
     <div><a href="https://wa.me/62895360828717" target="_blank"><i class="fab fa-whatsapp"></i></a></div>
-    <div><a href="https://www.instagram.com/padangku_indonesia" target="_blank"><i class="fab fa-instagram"></i></a></div>
+    <div><a href="https://www.instagram.com/padangku_indonesia" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
     <div><a href="https://x.com/Padangku2011" target="_blank"><i class="fab fa-twitter"></i></a></div>
   </div>
 </body>

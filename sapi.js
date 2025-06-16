@@ -1,6 +1,11 @@
 let kilo = prompt("Masukkan Berapa Kg Daging Sapi")
 const params = new URLSearchParams(window.location.search);
 const nama = params.get("nama");
+if (kilo === null || isNaN(kilo) || kilo.trim() === "" || kilo <= 0) {
+  alert("Masukkan jumlah kg sapi dengan benar!");
+  kilo = 1;
+}
+kilo = parseFloat(kilo);
 if (nama == "dendeng") {
     document.getElementById("bintang").innerHTML = '⭐⭐⭐⭐'
     document.getElementById("gambar1").innerHTML = '<img src="img/rendang.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Rendang">'

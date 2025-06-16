@@ -1,6 +1,11 @@
 let kilo = prompt("Masukkan Berapa Kg Daging Ikan")
 const params = new URLSearchParams(window.location.search);
 const nama = params.get("nama");
+if (kilo === null || isNaN(kilo) || kilo.trim() === "" || kilo <= 0) {
+  alert("Masukkan jumlah kg ikan dengan benar!");
+  kilo = 1;
+}
+kilo = parseFloat(kilo);
 if (nama == "ikanbakar") {
   document.getElementById("bintang").innerHTML = '⭐⭐⭐⭐⭐'
   document.getElementById("gambar1").innerHTML = '<img src="img/gulaikepalakakap.png" class="img-fluid rounded-start w-100" style="height: 100%; object-fit: cover;" alt="Gulai Kepala Kakap">'

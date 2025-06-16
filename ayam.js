@@ -1,7 +1,7 @@
 let kilo = prompt("Masukkan Berapa Kg Daging Ayam")
 const params = new URLSearchParams(window.location.search);
 const nama = params.get("nama");
-if (kilo === null || isNaN(kilo) || kilo.trim() === "") {
+if (kilo === null || isNaN(kilo) || kilo.trim() === "" || kilo <= 0) {
   alert("Masukkan jumlah kg ayam dengan benar!");
   kilo = 1;
 }
