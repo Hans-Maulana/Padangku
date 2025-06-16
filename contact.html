@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title></title>
+  <title>Contact</title>
   <script src="jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-  </script>
-  <script type="text/javascript">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
     (function () {
-      emailjs.init({
-        publicKey: "jqQnkqgmXsXIlRA2w",
-      });
+      emailjs.init({ publicKey: "jqQnkqgmXsXIlRA2w" });
     })();
   </script>
+
   <script src="script.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -28,157 +28,107 @@
       padding: 0;
     }
 
-    form#contactForm {
-      background: #fff;
-      padding: 30px 40px;
-      border-radius: 20px;
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    .contact-layout {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      padding: 40px 20px;
+    }
+
+    .contact-illustration {
+      flex: 1 1 300px;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .contact-illustration img {
       width: 100%;
-      max-width: 420px;
+      max-width: 400px;
+    }
+
+    .contact-form-container {
+      flex: 1 1 300px;
+      max-width: 450px;
+    }
+
+    form#contactForm {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e1dff7;
+      width: 100%;
       box-sizing: border-box;
-      margin-top: 10px;
     }
 
     form#contactForm label {
-      display: block;
-      margin-bottom: 8px;
       font-weight: 600;
-      color: #5a4a3e;
-      font-size: 1rem;
-      user-select: none;
+      color: #59575e;
+      margin-top: 12px;
     }
 
-    form#contactForm input[type="text"],
-    form#contactForm input[type="email"],
+    form#contactForm input,
     form#contactForm textarea {
       width: 100%;
-      padding: 12px 15px;
-      border: 2px solid #d9cbbd;
-      border-radius: 12px;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1.8px solid #d97706;
+      background-color: #ffffff;
+      color: #d97706;
       font-size: 1rem;
-      color: #5a4a3e;
-      background-color: #fdf8f0;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
       box-sizing: border-box;
-      resize: vertical;
-      min-height: 44px;
+    }
+
+    form#contactForm input:focus,
+    form#contactForm textarea:focus {
+      border-color: #d97706;
+      box-shadow: 0 0 6px rgba(250, 249, 253, 0.4);
+      outline: none;
+      background-color: #fff;
     }
 
     form#contactForm textarea {
       min-height: 100px;
     }
 
-    form#contactForm input[type="text"]:focus,
-    form#contactForm input[type="email"]:focus,
-    form#contactForm textarea:focus {
-      border-color: #d97706;
-      box-shadow: 0 0 8px rgba(217, 119, 6, 0.4);
-      outline: none;
-      background-color: #fffaf0;
-    }
-
     button[type="submit"] {
-      display: block;
-      width: 100%;
-      padding: 14px 0;
       margin-top: 20px;
-      background-color: #d97706;
-      color: white;
-      font-weight: 700;
-      font-size: 1.2rem;
-      border: none;
+      padding: 12px 0;
+      width: 100%;
+      background-color: transparent;
+      color: #d97706;
+      border: 2px solid #d97706;
       border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
       cursor: pointer;
-      box-shadow: 0 8px 15px rgba(217, 119, 6, 0.45);
-      transition: background-color 0.3s ease;
-      user-select: none;
     }
 
     button[type="submit"]:hover {
-      background-color: #b36003;
+      background-color: #d97706;
+      color: #fff;
     }
 
     label.error {
       color: #d14343;
       font-size: 0.9em;
-      margin-top: 6px;
-      display: block;
-      font-weight: 600;
       font-style: italic;
+      margin-top: 5px;
     }
 
-    .Home {
+    .kelasberat {
       text-align: center;
-      background: #b36003;
-      color: #fff;
-      border: none;
-      padding: 14px 28px;
-      border-radius: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 8px 15px rgba(10, 66, 117, 0.4);
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .Home a {
-      text-decoration: none;
-      color: white;
-    }
-
-    .Home:hover {
-      background: #b36003;
-      box-shadow: 0 12px 20px rgba(8, 58, 101, 0.6);
-    }
-
-    .my-navbar-bg {
-      background-color: #fff9f0;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-      font-weight: 600;
-    }
-
-    .navbar-brand .logo {
-      width: 70px;
-      filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
-    }
-
-    .navbar-nav .nav-link {
-      color: #555;
-      font-size: 1.05rem;
-      transition: color 0.3s ease;
-    }
-
-    .navbar-nav .nav-link:hover,
-    .navbar-nav .nav-link:focus {
-      color: #d97706;
-      font-weight: 700;
-    }
-
-    .nav-item.dropdown:hover>.dropdown-menu {
-      display: block;
-      margin-top: 0;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .dropdown-menu {
-      border-radius: 12px;
-      padding: 0.4rem 0;
-    }
-
-    .dropdown-item {
-      font-weight: 500;
-      font-size: 1rem;
-      padding: 0.6rem 1.5rem;
-      transition: background-color 0.2s ease;
-    }
-
-    .dropdown-item:hover {
-      background-color: #ffd29e;
+      margin-bottom: 20px;
       color: #663300;
+      font-size: 1.6rem;
     }
 
-    #wa {
-      width: 100px;
+    .kelasberat i {
+      margin-right: 10px;
+      color: #d97706;
     }
 
     .foot {
@@ -189,8 +139,23 @@
       margin-bottom: 10px;
     }
 
-    #container {
-      padding-top: 0px;
+    .foot a {
+      font-size: 40px;
+      color: #d97706;
+    }
+
+    .foot a:hover {
+      color: #b36003;
+    }
+
+    .navbar-brand .logo {
+      width: 70px;
+    }
+
+    .my-navbar-bg {
+      background-color: #fff9f0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+      font-weight: 600;
     }
   </style>
 </head>
@@ -220,50 +185,55 @@
       </div>
     </div>
   </nav>
-  <div id="container" class="d-flex justify-content-center mt-5">
-    <form id="contactForm" novalidate>
-      <label for="name">Nama:</label>
-      <input type="text" id="name" name="name" required minlength="3" />
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
+  <!-- Contact Layout -->
+  <div class="contact-layout container">
+    <!-- Gambar kiri -->
+    <div class="contact-illustration">
+      <img src="img/ayamgulai.png" alt="Contact Illustration">
+    </div>
 
-      <label for="message">Pesan:</label>
-      <textarea id="message" name="message" required minlength="10"></textarea>
+    <!-- Form kanan -->
+    <div class="contact-form-container">
+      <form id="contactForm" novalidate>
+        <h2 class="kelasberat"><i class="fas fa-envelope-open-text"></i>Contact</h2>
 
-      <button type="submit" onclick="sendMail()">Kirim</button>
-    </form>
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" placeholder="Your Name..." required minlength="3" />
+
+        <label for="email">E-mail *</label>
+        <input type="email" id="email" name="email" placeholder="Your E-mail Address..." required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your Message..." required minlength="10"></textarea>
+
+        <button type="submit" onclick="sendMail()">Send</button>
+      </form>
+    </div>
   </div>
+
+  <!-- Script Validasi -->
   <script>
     $(document).ready(function () {
       $("#contactForm").validate({
         rules: {
-          name: {
-            required: true,
-            minlength: 3,
-          },
-          email: {
-            required: true,
-            email: true,
-          },
-          message: {
-            required: true,
-            minlength: 10,
-          },
+          name: { required: true, minlength: 3 },
+          email: { required: true, email: true },
+          message: { required: true, minlength: 10 }
         },
         messages: {
           name: {
             required: "Nama wajib diisi",
-            minlength: "Nama minimal 3 karakter",
+            minlength: "Nama minimal 3 karakter"
           },
           email: {
             required: "Email wajib diisi",
-            email: "Format email tidak valid",
+            email: "Format email tidak valid"
           },
           message: {
             required: "Pesan wajib diisi",
-            minlength: "Pesan minimal 10 karakter",
-          },
+            minlength: "Pesan minimal 10 karakter"
+          }
         },
         submitHandler: function (form) {
           alert("Pesan kamu sudah terkirim!");
@@ -274,35 +244,24 @@
         },
       });
     });
+
     function sendMail() {
       let params = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
         pesan: document.getElementById("message").value,
-      }
-      emailjs.send("service_m1kiv8s", "template_26k9gi9", params)
-      emailjs.send("service_m1kiv8s", "template_4nz5b67", params)
+      };
+      emailjs.send("service_m1kiv8s", "template_26k9gi9", params);
+      emailjs.send("service_m1kiv8s", "template_4nz5b67", params);
     }
   </script>
-  <div class="foot">
-    <div>
-      <a href="https://wa.me/62895360828717" target="_blank" style="font-size: 40px; color:#d97706;">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-    </div>
-    <div>
-      <a href="https://www.instagram.com/padangku_indonesia?igsh=MWVxaHZkbDFjaG9vcA%3D%3D&utm_source=qr" target="_blank"
-        style="font-size: 40px; color:#d97706 ;">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </div>
-    <div>
-      <a href="https://x.com/Padangku2011" target="_blank" style="font-size: 40px; color:#d97706;">
-        <i class="fab fa-twitter"></i>
-      </a>
-    </div>
-  </div>
 
+  <!-- Footer -->
+  <div class="foot">
+    <div><a href="https://wa.me/62895360828717" target="_blank"><i class="fab fa-whatsapp"></i></a></div>
+    <div><a href="https://www.instagram.com/padangku_indonesia" target="_blank"><i class="fab fa-instagram"></i></a></div>
+    <div><a href="https://x.com/Padangku2011" target="_blank"><i class="fab fa-twitter"></i></a></div>
+  </div>
 </body>
 
 </html>
